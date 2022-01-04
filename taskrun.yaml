@@ -1,0 +1,18 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  name: ansible-test-taskrun
+spec:
+  taskRef:
+    name: run-playbook
+  serviceaccount: ansible-deployer-account
+  workspace:
+    -name: runner-dir
+  resources:
+    inputs:
+      - name: repo
+        resourceRef:
+          name: ansible-test-pvc
+  param:
+    - project-dir: kubernetes
+    - args: -p,playbook.yaml
