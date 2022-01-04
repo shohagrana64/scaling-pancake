@@ -1,0 +1,7 @@
+-
+  name: "create a directory on remote server"
+  hosts: web
+  tasks:
+   -
+      name: "file"
+      command: mkdir running-ansible
