@@ -4,7 +4,7 @@ metadata:
   name: bookapi-deployment
   #namespace: monitoring
 spec:
-  replicas: 12
+  replicas: 2
   selector:
     matchLabels:  # matchLabels supports replicaSets,Deployments, Jobs, DaemonSet # No matchLabels on older resources such as ReplicationControllers and Services.
       app: bookapi
