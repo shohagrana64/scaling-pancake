@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: bookapi
-          image: shohagrana64/bookapiv22:latest
+          image: shohagrana64/bookapiv2:latest
 #          resources:
 #            requests:
 #              cpu: 100m
